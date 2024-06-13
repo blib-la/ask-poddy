@@ -111,7 +111,7 @@ git clone https://github.com/runpod/docs.git ./data/runpod-docs
 
 <!-- prettier-ignore-start -->
 > [!NOTE] 
-> This makes it possible for Ask Poddy to include images from the RunPod documentation when
+> This makes it possible for **Ask Poddy** to include images from the RunPod documentation when
 > the LLM references them
 <!-- prettier-ignore-end -->
 
