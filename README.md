@@ -173,7 +173,8 @@ npm install
 
 <img src="./assets/20240612_screenshot_id_of_worker.png" alt="Screenshot showing the ID of the worker underneath the title" width="550">
 
-3. Create your `.env.local` file with the following variables:
+3. Create your `.env.local` based on [.env.local.example](./.env.local.example) or by creating a
+   file with the following variables:
 
 ```bash
 RUNPOD_API_KEY=your_runpod_api_key
