@@ -12,10 +12,11 @@ for text embeddings.
 This tutorial will guide you through deploying **Ask Poddy** in your environment, enabling it to
 answer questions related to RunPod effectively, by leveraging the open-source workers
 [worker-vllm](https://github.com/runpod-workers/worker-vllm) and the
-[worker-infinity-embedding](https://github.com/runpod-workers/worker-infinity-embedding) from
-RunPod.
+[worker-infinity-embedding](https://github.com/runpod-workers/worker-infinity-embedding).
 
 ---
+
+<br />
 
 <!-- toc -->
 
@@ -35,6 +36,8 @@ RunPod.
 
 <!-- tocstop -->
 
+<br />
+
 ---
 
 ## Concept
@@ -52,16 +55,15 @@ Here's how the RAG process works in **Ask Poddy**:
 1. **User**: Asks a question.
 2. **Vector Store**: The question is sent to LangChain, which uses the
    [worker-infinity-embedding](https://github.com/runpod-workers/worker-infinity-embedding) endpoint
-   to convert the question into an embedding.
+   to convert the question into an embedding using the
+   [multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct)
+   model.
 3. **Vector Store**: Performs a similarity search to find relevant documents based on the question.
 4. **AI SDK**: The retrieved documents and the user's question are sent to the
    [worker-vllm](https://github.com/runpod-workers/worker-vllm) endpoint.
 5. **worker-vllm**: Generates an answer using the
    [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) model.
 6. **User**: Receives the answer.
-
-This process ensures that **Ask Poddy** can effectively answer questions by leveraging relevant
-documents when interacting with the LLM.
 
 <!-- prettier-ignore-start -->
 > [!TIP] 
@@ -77,9 +79,9 @@ documents when interacting with the LLM.
 -   [Node.js and npm](https://nodejs.org/en) installed
 -   [RunPod](https://www.runpod.io/) account
 
----
-
 <br />
+
+---
 
 ## Tutorial: Setting Up "Ask Poddy" in Your Environment
 
