@@ -13,7 +13,7 @@ text embeddings.
 
 This tutorial will guide you through deploying **Ask Poddy** in your environment, enabling it to
 answer questions related to [RunPod](https://runpod.io) effectively, by leveraging the open-source
-workers [worker-vllm](https://github.com/runpod-workers/worker-vllm) and the
+workers [worker-vllm](https://github.com/runpod-workers/worker-vllm) and
 [worker-infinity-embedding](https://github.com/runpod-workers/worker-infinity-embedding).
 
 ---
@@ -234,10 +234,13 @@ npm run dev
 
 ### 7. Ask Poddy
 
-Now that everything is running, you can ask your RunPod-related question, like:
+Now that everything is running, you can ask your [RunPod](https://runpod.io)-related question, like:
 
+-   What is RunPod?
 -   How do I create a serverless endpoint?
 -   What are the benefits of using a network volume?
+-   How can I become a host for the community cloud?
+-   Can RunPod help my startup to get going?
 
 <!-- prettier-ignore-start -->
 > [!NOTE]
