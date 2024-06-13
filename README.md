@@ -20,19 +20,19 @@ answer questions related to RunPod effectively, by leveraging the open-source wo
 
 <!-- toc -->
 
--   [Concept](#concept)
--   [Prerequisites](#prerequisites)
--   [Tutorial: Setting Up "Ask Poddy" in Your Environment](#tutorial-setting-up-ask-poddy-in-your-environment)
-    -   [1. Clone the Repository](#1-clone-the-repository)
-    -   [2. Install Dependencies](#2-install-dependencies)
-    -   [3. Set Up RunPod Serverless Endpoints](#3-set-up-runpod-serverless-endpoints)
-        -   [3.1 Network Volumes](#31-network-volumes)
-        -   [3.2 Worker-vLLM Endpoint](#32-worker-vllm-endpoint)
-        -   [3.3 Worker-Infinity-Embedding Endpoint](#33-worker-infinity-embedding-endpoint)
-    -   [4. Configure Environment Variables](#4-configure-environment-variables)
-    -   [5. Populate the Vector Store](#5-populate-the-vector-store)
-    -   [6. Start the Local Web Server](#6-start-the-local-web-server)
-    -   [7. Use Ask Poddy](#7-use-ask-poddy)
+- [Concept](#concept)
+- [Prerequisites](#prerequisites)
+- [Tutorial: Setting Up "Ask Poddy" in Your Environment](#tutorial-setting-up-ask-poddy-in-your-environment)
+  * [1. Clone the Repository](#1-clone-the-repository)
+  * [2. Install Dependencies](#2-install-dependencies)
+  * [3. Set Up RunPod Serverless Endpoints](#3-set-up-runpod-serverless-endpoints)
+    + [3.1 Network Volumes](#31-network-volumes)
+    + [3.2 Worker-vLLM Endpoint](#32-worker-vllm-endpoint)
+    + [3.3 Worker-Infinity-Embedding Endpoint](#33-worker-infinity-embedding-endpoint)
+  * [4. Configure Environment Variables](#4-configure-environment-variables)
+  * [5. Populate the Vector Store](#5-populate-the-vector-store)
+  * [6. Start the Local Web Server](#6-start-the-local-web-server)
+  * [7. Ask Poddy](#7-ask-poddy)
 
 <!-- tocstop -->
 
@@ -231,7 +231,7 @@ npm run dev
 
 <br />
 
-### 7. Use Ask Poddy
+### 7. Ask Poddy
 
 Now that everything is running, you can ask your RunPod-related question, like:
 
