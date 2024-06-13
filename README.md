@@ -83,8 +83,11 @@ cd ask-poddy
 2. Clone the [RunPod docs](https://github.com/runpod/docs) repository into
    `ask-poddy/data/runpod-docs`.
 
-> [!NOTE] This repository contains the RunPod documentation that Ask Poddy will use to answer
+<!-- prettier-ignore-start -->
+> [!NOTE] 
+> This repository contains the RunPod documentation that Ask Poddy will use to answer
 > questions.
+<!-- prettier-ignore-end -->
 
 ```bash
 git clone https://github.com/runpod/docs.git ./data/runpod-docs
