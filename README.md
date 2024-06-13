@@ -32,7 +32,7 @@ answer questions related to RunPod effectively, by leveraging the open-source wo
     -   [4. Configure Environment Variables](#4-configure-environment-variables)
     -   [5. Populate the Vector Store](#5-populate-the-vector-store)
     -   [6. Start the Local Web Server](#6-start-the-local-web-server)
-    -   [7. Use the RAG app](#7-use-the-rag-app)
+    -   [7. Use Ask Poddy](#7-use-ask-poddy)
 
 <!-- tocstop -->
 
@@ -231,7 +231,7 @@ npm run dev
 
 <br />
 
-### 7. Use the RAG app
+### 7. Use Ask Poddy
 
 Now that everything is running, you can ask your RunPod-related question, like:
 
