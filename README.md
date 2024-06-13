@@ -39,11 +39,12 @@ RunPod.
 
 ## Concept
 
-**Ask Poddy** is a locally running RAG web app (it could also be deployed into the cloud) that
-utilizes open-source models through serverless endpoints. By leveraging OpenAI-compatible APIs for
-these endpoints, we can integrate existing OpenAI-compatible tools and frameworks seamlessly without
-creating a custom API. This setup ensures efficient, cost-effective performance while maintaining
-compatibility with widely-used AI tools.
+**Ask Poddy** is designed to demonstrate the integration of OpenAI-compatible APIs with open-source
+models, utilizing serverless endpoints to reduce costs. The application runs locally (but it could
+also be deployed into the cloud), while the computational heavy lifting is handled by serverless
+endpoints on RunPod. This architecture allows seamless use of existing OpenAI-compatible tools and
+frameworks without needing to develop custom APIs, ensuring efficient and cost-effective
+performance.
 
 Here's how the RAG process works in **Ask Poddy**:
 
