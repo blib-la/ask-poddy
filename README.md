@@ -119,7 +119,7 @@ Navigate to the `ask-poddy` directory and install the dependencies:
 npm install
 ```
 
-<br /><br />
+<br />
 
 ### 3. Set Up RunPod Serverless Endpoints
 
