@@ -2,9 +2,10 @@
 
 ![A screenshot of the Ask Poddy web app showing a chat between the user and the AI](./assets/20240610_screenshot_ask_poddy_what_is_a_network_volume.png)
 
-**Ask Poddy** is a user-friendly Retrieval-Augmented Generation (RAG) web application designed to
-showcase the ease of setting up OpenAI-compatible APIs using open-source models hosted on RunPod.
-Built with Next.js, React, Tailwind, Vercel AI SDK, and LangChain, it uses
+**Ask Poddy** _(named after "Poddy", the RunPod mascot)_ is a user-friendly Retrieval-Augmented
+Generation (RAG) web application designed to showcase the ease of setting up OpenAI-compatible APIs
+using open-source models hosted on RunPod. Built with Next.js, React, Tailwind, Vercel AI SDK, and
+LangChain, it uses
 [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) for the LLM
 and [multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct)
 for text embeddings.
@@ -20,19 +21,19 @@ answer questions related to RunPod effectively, by leveraging the open-source wo
 
 <!-- toc -->
 
-- [Concept](#concept)
-- [Prerequisites](#prerequisites)
-- [Tutorial: Setting Up "Ask Poddy" in Your Environment](#tutorial-setting-up-ask-poddy-in-your-environment)
-  * [1. Clone the Repository](#1-clone-the-repository)
-  * [2. Install Dependencies](#2-install-dependencies)
-  * [3. Set Up RunPod Serverless Endpoints](#3-set-up-runpod-serverless-endpoints)
-    + [3.1 Network Volumes](#31-network-volumes)
-    + [3.2 Worker-vLLM Endpoint](#32-worker-vllm-endpoint)
-    + [3.3 Worker-Infinity-Embedding Endpoint](#33-worker-infinity-embedding-endpoint)
-  * [4. Configure Environment Variables](#4-configure-environment-variables)
-  * [5. Populate the Vector Store](#5-populate-the-vector-store)
-  * [6. Start the Local Web Server](#6-start-the-local-web-server)
-  * [7. Ask Poddy](#7-ask-poddy)
+-   [Concept](#concept)
+-   [Prerequisites](#prerequisites)
+-   [Tutorial: Setting Up "Ask Poddy" in Your Environment](#tutorial-setting-up-ask-poddy-in-your-environment)
+    -   [1. Clone the Repository](#1-clone-the-repository)
+    -   [2. Install Dependencies](#2-install-dependencies)
+    -   [3. Set Up RunPod Serverless Endpoints](#3-set-up-runpod-serverless-endpoints)
+        -   [3.1 Network Volumes](#31-network-volumes)
+        -   [3.2 Worker-vLLM Endpoint](#32-worker-vllm-endpoint)
+        -   [3.3 Worker-Infinity-Embedding Endpoint](#33-worker-infinity-embedding-endpoint)
+    -   [4. Configure Environment Variables](#4-configure-environment-variables)
+    -   [5. Populate the Vector Store](#5-populate-the-vector-store)
+    -   [6. Start the Local Web Server](#6-start-the-local-web-server)
+    -   [7. Ask Poddy](#7-ask-poddy)
 
 <!-- tocstop -->
 
