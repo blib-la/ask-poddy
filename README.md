@@ -44,13 +44,13 @@ workers [worker-vllm](https://github.com/runpod-workers/worker-vllm) and
 
 ## Concept
 
-**Ask Poddy** is designed to demonstrate the integration of OpenAI-compatible APIs with open-source
-models, utilizing serverless endpoints to reduce costs. The application runs locally (but it could
-also be deployed into the cloud), while the computational heavy lifting is handled by serverless
-endpoints on [RunPod](https://runpod.io). This architecture allows seamless use of existing
-OpenAI-compatible tools and frameworks without needing to develop custom APIs.
+**Ask Poddy** is designed to demonstrate the integration of serverless OpenAI-compatible APIs with
+open-source models. The application runs locally (but it could also be deployed into the cloud),
+while the computational heavy lifting is handled by serverless endpoints on
+[RunPod](https://runpod.io). This architecture allows seamless use of existing OpenAI-compatible
+tools and frameworks without needing to develop custom APIs.
 
-Here's how the RAG process works in **Ask Poddy**:
+Here's how RAG works in **Ask Poddy**:
 
 ![Diagram showing how the RAG process works](./assets/20240613_diagram_rag.png)
 
