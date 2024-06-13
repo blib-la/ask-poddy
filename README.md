@@ -83,6 +83,8 @@ documents when interacting with the LLM.
 
 ## Tutorial: Setting Up "Ask Poddy" in Your Environment
 
+<br />
+
 ### 1. Clone the Repository
 
 1. Clone the **Ask Poddy** repository and go into the cloned directory:
