@@ -23,8 +23,8 @@ workers [worker-vllm](https://github.com/runpod-workers/worker-vllm) and
 <!-- toc -->
 
 -   [Concept](#concept)
--   [Prerequisites](#prerequisites)
 -   [Tutorial: Setting Up "Ask Poddy" in Your Environment](#tutorial-setting-up-ask-poddy-in-your-environment)
+    -   [Prerequisites](#prerequisites)
     -   [1. Clone the Repository](#1-clone-the-repository)
     -   [2. Install Dependencies](#2-install-dependencies)
     -   [3. Set Up RunPod Serverless Endpoints](#3-set-up-runpod-serverless-endpoints)
@@ -76,16 +76,13 @@ Here's how the RAG process works in **Ask Poddy**:
 
 ---
 
-## Prerequisites
+## Tutorial: Setting Up "Ask Poddy" in Your Environment
 
+### Prerequisites
+
+-   [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed
 -   [Node.js and npm](https://nodejs.org/en) installed
 -   [RunPod](https://www.runpod.io/) account
-
-<br />
-
----
-
-## Tutorial: Setting Up "Ask Poddy" in Your Environment
 
 ### 1. Clone the Repository
 
