@@ -1,5 +1,7 @@
 <h1 align="center">Ask Poddy</h1>
 
+![A screenshot of the Ask Poddy web app showing a chat between the user and the AI](./assets/20240610_screenshot_ask_poddy_what_is_a_network_volume.png)
+
 **Ask Poddy** is a user-friendly Retrieval-Augmented Generation (RAG) web application designed to
 showcase the ease of setting up OpenAI-compatible APIs using open-source models hosted on RunPod.
 Built with Next.js, React, Tailwind, Vercel AI SDK, and LangChain, it uses
@@ -12,8 +14,6 @@ answer questions related to RunPod effectively, by leveraging the open-source wo
 [worker-vllm](https://github.com/runpod-workers/worker-vllm) and the
 [worker-infinity-embedding](https://github.com/runpod-workers/worker-infinity-embedding) from
 RunPod.
-
-![A screenshot of the Ask Poddy web app showing a chat between the user and the AI](./assets/20240610_screenshot_ask_poddy_what_is_a_network_volume.png)
 
 ---
 
@@ -43,8 +43,7 @@ RunPod.
 models, utilizing serverless endpoints to reduce costs. The application runs locally (but it could
 also be deployed into the cloud), while the computational heavy lifting is handled by serverless
 endpoints on RunPod. This architecture allows seamless use of existing OpenAI-compatible tools and
-frameworks without needing to develop custom APIs, ensuring efficient and cost-effective
-performance.
+frameworks without needing to develop custom APIs.
 
 Here's how the RAG process works in **Ask Poddy**:
 
@@ -54,10 +53,9 @@ Here's how the RAG process works in **Ask Poddy**:
 2. **Vector Store**: The question is sent to LangChain, which uses the
    [worker-infinity-embedding](https://github.com/runpod-workers/worker-infinity-embedding) endpoint
    to convert the question into an embedding.
-3. **Vector Store**: Performs a similarity search to find relevant documents based on the question's
-   embedding.
+3. **Vector Store**: Performs a similarity search to find relevant documents based on the question.
 4. **AI SDK**: The retrieved documents and the user's question are sent to the
-   [worker-vllm](https://github.com/runpod-workers/worker-vllm) endpoint to generate an answer.
+   [worker-vllm](https://github.com/runpod-workers/worker-vllm) endpoint.
 5. **worker-vllm**: Generates an answer using the
    [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) model.
 6. **User**: Receives the answer.
@@ -67,8 +65,10 @@ documents when interacting with the LLM.
 
 <!-- prettier-ignore-start -->
 > [!TIP] 
-> We have choosen these two models as they are the best to date to generate texts in English. Feel free to use other models as well that fit in with your use case.
+> You can choose any other LLM that is compatible with [vLLM](https://github.com/vllm-project/vllm). 
 <!-- prettier-ignore-end -->
+
+<br />
 
 ---
 
@@ -131,13 +131,16 @@ npm install
 
 #### 3.1 Network Volumes
 
-Using network volumes ensures that the models and embeddings are stored persistently, allowing for
-faster subsequent requests as the data does not need to be downloaded or recreated each time.
-
 1. Create two network volumes with 15GB storage each in the same data center as the serverless
    endpoints.
     - Volume for embeddings: `infinity_embeddings`
     - Volume for LLM: `vllm_llama3`
+
+<!-- prettier-ignore-start -->
+> [!NOTE] 
+> Using network volumes ensures that the models and embeddings are stored persistently, allowing for
+> faster subsequent requests as the data does not need to be downloaded or recreated each time.
+<!-- prettier-ignore-end -->
 
 #### 3.2 Worker-vLLM Endpoint
 
@@ -166,7 +169,7 @@ faster subsequent requests as the data does not need to be downloaded or recreat
    [Generate API Key](https://docs.runpod.io/get-started/api-keys)
 2. Find the endpoint IDs underneath the deployed serverless endpoints.
 
-![Screenshot showing the ID of the worker underneath the title](./assets/20240612_screenshot_id_of_worker.png)
+<img src="./assets/20240612_screenshot_id_of_worker.png" alt="Screenshot showing the ID of the worker underneath the title" width="550">
 
 3. Create your `.env.local` file with the following variables:
 
@@ -193,8 +196,9 @@ npm run populate
 > Subsequent requests will use the downloaded model stored in the network volume.
 <!-- prettier-ignore-end -->
 
-This command reads all markdown documents from a defined folder, creates embeddings using the
-embedding endpoint running on RunPod, and stores these embeddings in the local vector store:
+This command reads all markdown documents from the `ask-poddy/data/runpod-docs/` folder, creates
+embeddings using the embedding endpoint running on RunPod, and stores these embeddings in the local
+vector store:
 
 ![Diagram showing how the vector store gets populated with documents](./assets/20240613_diagram_populate_vector_store.png)
 
@@ -223,7 +227,7 @@ embedding endpoint running on RunPod, and stores these embeddings in the local v
 npm run dev
 ```
 
-2. Open `http://localhost:3000` to access the UI.
+2. Open http://localhost:3000 to access the UI.
 
 <br />
 
