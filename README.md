@@ -1,14 +1,17 @@
 <h1 align="center">Ask Poddy</h1>
 
-Ask Poddy is a user-friendly Retrieval-Augmented Generation (RAG) web application designed to
+**Ask Poddy** is a user-friendly Retrieval-Augmented Generation (RAG) web application designed to
 showcase the ease of setting up OpenAI-compatible APIs using open-source models hosted on RunPod.
-It's built using Next.js, React, Tailwind, Vercel AI SDK, and LangChain for the application,
+Built with Next.js, React, Tailwind, Vercel AI SDK, and LangChain, it uses
 [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) for the LLM
 and [multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct)
 for text embeddings.
 
-By following this tutorial, you'll learn how to deploy Ask Poddy in your environment, allowing it to
-answer questions related to RunPod effectively.
+This tutorial will guide you through deploying **Ask Poddy** in your environment, enabling it to
+answer questions related to RunPod effectively, by leveraging the open-source workers
+[worker-vllm](https://github.com/runpod-workers/worker-vllm) and the
+[worker-infinity-embedding](https://github.com/runpod-workers/worker-infinity-embedding) from
+RunPod.
 
 ![A screenshot of the Ask Poddy web app showing a chat between the user and the AI](./assets/20240610_screenshot_ask_poddy_what_is_a_network_volume.png)
 
@@ -36,17 +39,13 @@ answer questions related to RunPod effectively.
 
 ## Concept
 
-The idea is to create a RAG web app that uses open-source models running on serverless
-infrastructure for the endpoints (to keep costs to a minimum) while the web app itself runs locally
-or deployed on any provider that works with Next.js (like Vercel). This ensures that we can use
-tools or frameworks that are already compatible with OpenAI without having to develop our own API.
+**Ask Poddy** is a locally running RAG web app (it could also be deployed into the cloud) that
+utilizes open-source models through serverless endpoints. By leveraging OpenAI-compatible APIs for
+these endpoints, we can integrate existing OpenAI-compatible tools and frameworks seamlessly without
+creating a custom API. This setup ensures efficient, cost-effective performance while maintaining
+compatibility with widely-used AI tools.
 
-The idea is to create a RAG web app that is using open source models running on serverless
-infrastructure (to keep costs to a minimum) and at the same time have an OpenAI-compatible API. This
-ensure that we can use tools or frameworks, that are compatible with OpenAI already and don't have
-to come up with our own API.
-
-Here's how the RAG process works in Ask Poddy:
+Here's how the RAG process works in **Ask Poddy**:
 
 ![Diagram showing how the RAG process works](./assets/20240613_diagram_rag.png)
 
@@ -62,8 +61,13 @@ Here's how the RAG process works in Ask Poddy:
    [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) model.
 6. **User**: Receives the answer.
 
-This process ensures that Ask-Poddy can effectively answer questions by leveraging relevant
+This process ensures that **Ask Poddy** can effectively answer questions by leveraging relevant
 documents when interacting with the LLM.
+
+<!-- prettier-ignore-start -->
+> [!TIP] 
+> We have choosen these two models as they are the best to date to generate texts in English. Feel free to use other models as well that fit in with your use case.
+<!-- prettier-ignore-end -->
 
 ---
 
