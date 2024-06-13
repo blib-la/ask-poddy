@@ -2,10 +2,10 @@
 
 ![A screenshot of the Ask Poddy web app showing a chat between the user and the AI](./assets/20240610_screenshot_ask_poddy_what_is_a_network_volume.png)
 
-**Ask Poddy** _(named after "Poddy", the RunPod mascot)_ is a user-friendly Retrieval-Augmented
-Generation (RAG) web application designed to showcase the ease of setting up OpenAI-compatible APIs
-using open-source models running serverless on [RunPod](https://runpod.io). Built with Next.js,
-React, Tailwind, Vercel AI SDK, and LangChain, it uses
+**Ask Poddy** _(named after "Poddy", the [RunPod](https://runpod.io) mascot)_ is a user-friendly
+Retrieval-Augmented Generation (RAG) web application designed to showcase the ease of setting up
+OpenAI-compatible APIs using open-source models running serverless on [RunPod](https://runpod.io).
+Built with Next.js, React, Tailwind, Vercel AI SDK, and LangChain, it uses
 [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) for the LLM
 and [multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct)
 for text embeddings.
