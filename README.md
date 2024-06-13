@@ -36,6 +36,11 @@ answer questions related to RunPod effectively.
 
 ## Concept
 
+The idea is to create a RAG web app that uses open-source models running on serverless
+infrastructure for the endpoints (to keep costs to a minimum) while the web app itself runs locally
+or deployed on any provider that works with Next.js (like Vercel). This ensures that we can use
+tools or frameworks that are already compatible with OpenAI without having to develop our own API.
+
 The idea is to create a RAG web app that is using open source models running on serverless
 infrastructure (to keep costs to a minimum) and at the same time have an OpenAI-compatible API. This
 ensure that we can use tools or frameworks, that are compatible with OpenAI already and don't have
@@ -95,8 +100,11 @@ git clone https://github.com/runpod/docs.git ./data/runpod-docs
 
 3. Copy the `img` folder from `./data/runpod-docs/static/img` to `./public`
 
-> [!NOTE] This makes it possible for Ask Poddy to include images from the RunPod documentation when
+<!-- prettier-ignore-start -->
+> [!NOTE] 
+> This makes it possible for Ask Poddy to include images from the RunPod documentation when
 > the LLM references them
+<!-- prettier-ignore-end -->
 
 ### 2. Install Dependencies
 
@@ -161,9 +169,12 @@ To populate the vector store, run the following command:
 npm run populate
 ```
 
-> [!NOTE] The first run will take some time as the worker downloads the embeddings model
+<!-- prettier-ignore-start -->
+> [!NOTE] 
+> The first run will take some time as the worker downloads the embeddings model
 > ([multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct)).
 > Subsequent requests will use the downloaded model stored in the network volume.
+<!-- prettier-ignore-end -->
 
 This command reads all markdown documents from a defined folder, creates embeddings using the
 embedding endpoint running on RunPod, and stores these embeddings in the local vector store:
@@ -178,9 +189,12 @@ embedding endpoint running on RunPod, and stores these embeddings in the local v
    `multilingual-e5-large-instruct` model, and sends them back.
 4. **Vector Store**: LangChain saves these embeddings in the local vector store (`HNSWlib`).
 
-> [!TIP] A vector store is a database that stores embeddings (vector representations of text) to
+<!-- prettier-ignore-start -->
+> [!TIP] 
+> A vector store is a database that stores embeddings (vector representations of text) to
 > enable efficient similarity search. This is crucial for the RAG process as it allows the system to
 > quickly retrieve relevant documents based on the user's question.
+<!-- prettier-ignore-end -->
 
 ### 6. Start the Local Web Server
 
@@ -199,6 +213,9 @@ Now that everything is running, you can ask your RunPod-related question, like:
 -   How do I create a serverless endpoint?
 -   What are the benefits of using a network volume?
 
-> [!NOTE] The first run will take some time as the worker downloads the LLM
+<!-- prettier-ignore-start -->
+> [!NOTE]
+> The first run will take some time as the worker downloads the LLM
 > ([Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)).
 > Subsequent requests will use the downloaded model stored in the network volume.
+<!-- prettier-ignore-end -->
