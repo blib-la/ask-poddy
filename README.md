@@ -74,8 +74,8 @@ documents when interacting with the LLM.
 
 ## Prerequisites
 
--   Node.js and npm installed
--   RunPod account
+-   [Node.js and npm](https://nodejs.org/en) installed
+-   [RunPod](https://www.runpod.io/) account
 
 ---
 
@@ -83,7 +83,7 @@ documents when interacting with the LLM.
 
 ### 1. Clone the Repository
 
-1. Clone the Ask Poddy repository and go into the directory:
+1. Clone the **Ask Poddy** repository and go into the cloned directory:
 
 ```bash
 git clone https://github.com/blib-la/ask-poddy.git
@@ -118,6 +118,8 @@ Navigate to the `ask-poddy` directory and install the dependencies:
 ```bash
 npm install
 ```
+
+<br /><br />
 
 ### 3. Set Up RunPod Serverless Endpoints
 
