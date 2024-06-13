@@ -144,22 +144,24 @@ npm install
 
 #### 3.2 Worker-vLLM Endpoint
 
-1. Follow the guide for setting up the vLLM endpoint with
-   [worker-vllm](https://github.com/runpod-workers/worker-vllm):
-   [vLLM Setup Guide](https://docs.runpod.io/serverless/workers/vllm/get-started), but make sure to
-   use the `meta-llama/Meta-Llama-3-8B-Instruct` model instead of the one mentioned in the guide.
-   And also make sure to select the network volume `vllm_llama3` when creating the endpoint.
+1. [Follow the guide for setting up the vLLM endpoint](https://docs.runpod.io/serverless/workers/vllm/get-started),
+   but make sure to use the `meta-llama/Meta-Llama-3-8B-Instruct` model instead of the one mentioned
+   in the guide. And also make sure to select the network volume `vllm_llama3` when creating the
+   endpoint.
+
+<!-- prettier-ignore-start -->
+> [!TIP] 
+> The worker is using [worker-vllm](https://github.com/runpod-workers/worker-vllm).
+<!-- prettier-ignore-end -->
 
 #### 3.3 Worker-Infinity-Embedding Endpoint
 
-1. Create a template using this guide:
-   [Create Template](https://docs.runpod.io/pods/templates/manage-templates#creating-a-template)
+1. [Create a new template](https://docs.runpod.io/pods/templates/manage-templates#creating-a-template)
 2. Use the Docker image `runpod/worker-infinity-embedding:stable-cuda12.1.0` from
    [worker-infinity-embedding](https://github.com/runpod-workers/worker-infinity-embedding) and set
    the environment variable `MODEL_NAMES` to `intfloat/multilingual-e5-large-instruct`.
-3. Deploy a serverless endpoint using this guide:
-   [Deploy Endpoint](https://docs.runpod.io/serverless/workers/get-started#deploy-a-serverless-endpoint).
-   And also make sure to select the network volume `infinity_embeddings` when creating the endpoint.
+3. [Create a serverless endpoint](https://docs.runpod.io/serverless/workers/get-started#deploy-a-serverless-endpoint)
+   and make sure to select the network volume `infinity_embeddings`.
 
 <br />
 
