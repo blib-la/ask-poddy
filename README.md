@@ -4,15 +4,15 @@
 
 **Ask Poddy** _(named after "Poddy", the RunPod mascot)_ is a user-friendly Retrieval-Augmented
 Generation (RAG) web application designed to showcase the ease of setting up OpenAI-compatible APIs
-using open-source models hosted on RunPod. Built with Next.js, React, Tailwind, Vercel AI SDK, and
-LangChain, it uses
+using open-source models running serverless on [RunPod](https://runpod.io). Built with Next.js,
+React, Tailwind, Vercel AI SDK, and LangChain, it uses
 [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) for the LLM
 and [multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct)
 for text embeddings.
 
 This tutorial will guide you through deploying **Ask Poddy** in your environment, enabling it to
-answer questions related to RunPod effectively, by leveraging the open-source workers
-[worker-vllm](https://github.com/runpod-workers/worker-vllm) and the
+answer questions related to [RunPod](https://runpod.io) effectively, by leveraging the open-source
+workers [worker-vllm](https://github.com/runpod-workers/worker-vllm) and the
 [worker-infinity-embedding](https://github.com/runpod-workers/worker-infinity-embedding).
 
 ---
@@ -46,8 +46,8 @@ answer questions related to RunPod effectively, by leveraging the open-source wo
 **Ask Poddy** is designed to demonstrate the integration of OpenAI-compatible APIs with open-source
 models, utilizing serverless endpoints to reduce costs. The application runs locally (but it could
 also be deployed into the cloud), while the computational heavy lifting is handled by serverless
-endpoints on RunPod. This architecture allows seamless use of existing OpenAI-compatible tools and
-frameworks without needing to develop custom APIs.
+endpoints on [RunPod](https://runpod.io). This architecture allows seamless use of existing
+OpenAI-compatible tools and frameworks without needing to develop custom APIs.
 
 Here's how the RAG process works in **Ask Poddy**:
 
@@ -104,7 +104,7 @@ git clone https://github.com/runpod/docs.git ./data/runpod-docs
 
 <!-- prettier-ignore-start -->
 > [!NOTE] 
-> The [RunPod docs](https://github.com/runpod/docs) repository contains the RunPod documentation that **Ask Poddy** will use to answer
+> The [RunPod docs](https://github.com/runpod/docs) repository contains the [RunPod documentation](https://docs.runpod.io) that **Ask Poddy** will use to answer
 > questions.
 <!-- prettier-ignore-end -->
 
@@ -112,7 +112,7 @@ git clone https://github.com/runpod/docs.git ./data/runpod-docs
 
 <!-- prettier-ignore-start -->
 > [!NOTE] 
-> This makes it possible for **Ask Poddy** to include images from the RunPod documentation when
+> This makes it possible for **Ask Poddy** to include images from the [RunPod documentation](https://docs.runpod.io) when
 > the LLM references them
 <!-- prettier-ignore-end -->
 
@@ -166,9 +166,9 @@ npm install
 
 ### 4. Configure Environment Variables
 
-1. Generate your RunPod API key using this guide:
-   [Generate API Key](https://docs.runpod.io/get-started/api-keys)
-2. Find the endpoint IDs underneath the deployed serverless endpoints.
+1. [Generate your RunPod API key](https://docs.runpod.io/get-started/api-keys)
+2. Find the endpoint IDs underneath the
+   [deployed serverless endpoints](https://www.runpod.io/console/serverless).
 
 <img src="./assets/20240612_screenshot_id_of_worker.png" alt="Screenshot showing the ID of the worker underneath the title" width="550">
 
