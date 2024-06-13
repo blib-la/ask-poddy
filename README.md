@@ -19,19 +19,19 @@ RunPod.
 
 <!-- toc -->
 
--   [Concept](#concept)
--   [Prerequisites](#prerequisites)
--   [Tutorial: Setting Up "Ask Poddy" in Your Environment](#tutorial-setting-up-ask-poddy-in-your-environment)
-    -   [1. Clone the Repository](#1-clone-the-repository)
-    -   [2. Install Dependencies](#2-install-dependencies)
-    -   [3. Set Up RunPod Serverless Endpoints](#3-set-up-runpod-serverless-endpoints)
-        -   [3.1 Network Volumes](#31-network-volumes)
-        -   [3.2 Worker-vLLM Endpoint](#32-worker-vllm-endpoint)
-        -   [3.3 Worker-Infinity-Embedding Endpoint](#33-worker-infinity-embedding-endpoint)
-    -   [4. Configure Environment Variables](#4-configure-environment-variables)
-    -   [5. Populate the Vector Store](#5-populate-the-vector-store)
-    -   [6. Start the Local Web Server](#6-start-the-local-web-server)
-    -   [7. Use the RAG app](#7-use-the-rag-app)
+- [Concept](#concept)
+- [Prerequisites](#prerequisites)
+- [Tutorial: Setting Up "Ask Poddy" in Your Environment](#tutorial-setting-up-ask-poddy-in-your-environment)
+  * [1. Clone the Repository](#1-clone-the-repository)
+  * [2. Install Dependencies](#2-install-dependencies)
+  * [3. Set Up RunPod Serverless Endpoints](#3-set-up-runpod-serverless-endpoints)
+    + [3.1 Network Volumes](#31-network-volumes)
+    + [3.2 Worker-vLLM Endpoint](#32-worker-vllm-endpoint)
+    + [3.3 Worker-Infinity-Embedding Endpoint](#33-worker-infinity-embedding-endpoint)
+  * [4. Configure Environment Variables](#4-configure-environment-variables)
+  * [5. Populate the Vector Store](#5-populate-the-vector-store)
+  * [6. Start the Local Web Server](#6-start-the-local-web-server)
+  * [7. Use the RAG app](#7-use-the-rag-app)
 
 <!-- tocstop -->
 
@@ -81,6 +81,8 @@ documents when interacting with the LLM.
 
 ## Tutorial: Setting Up "Ask Poddy" in Your Environment
 
+<br />
+
 ### 1. Clone the Repository
 
 1. Clone the **Ask Poddy** repository and go into the cloned directory:
@@ -110,6 +112,8 @@ git clone https://github.com/runpod/docs.git ./data/runpod-docs
 > This makes it possible for Ask Poddy to include images from the RunPod documentation when
 > the LLM references them
 <!-- prettier-ignore-end -->
+
+<br />
 
 ### 2. Install Dependencies
 
@@ -152,6 +156,8 @@ faster subsequent requests as the data does not need to be downloaded or recreat
    [Deploy Endpoint](https://docs.runpod.io/serverless/workers/get-started#deploy-a-serverless-endpoint).
    And also make sure to select the network volume `infinity_embeddings` when creating the endpoint.
 
+<br />
+
 ### 4. Configure Environment Variables
 
 1. Generate your RunPod API key using this guide:
@@ -167,6 +173,8 @@ RUNPOD_API_KEY=your_runpod_api_key
 RUNPOD_ENDPOINT_ID=your_vllm_endpoint_id
 RUNPOD_ENDPOINT_ID_EMBEDDING=your_embedding_endpoint_id
 ```
+
+<br />
 
 ### 5. Populate the Vector Store
 
@@ -203,6 +211,8 @@ embedding endpoint running on RunPod, and stores these embeddings in the local v
 > quickly retrieve relevant documents based on the user's question.
 <!-- prettier-ignore-end -->
 
+<br />
+
 ### 6. Start the Local Web Server
 
 1. Start the local web server:
@@ -212,6 +222,8 @@ npm run dev
 ```
 
 2. Open `http://localhost:3000` to access the UI.
+
+<br />
 
 ### 7. Use the RAG app
 
