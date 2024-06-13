@@ -83,15 +83,15 @@ cd ask-poddy
 2. Clone the [RunPod docs](https://github.com/runpod/docs) repository into
    `ask-poddy/data/runpod-docs`.
 
-<!-- prettier-ignore-start -->
-> [!NOTE] 
-> This repository contains the RunPod documentation that Ask Poddy will use to answer
-> questions.
-<!-- prettier-ignore-end -->
-
 ```bash
 git clone https://github.com/runpod/docs.git ./data/runpod-docs
 ```
+
+<!-- prettier-ignore-start -->
+> [!NOTE] 
+> The [RunPod docs](https://github.com/runpod/docs) repository contains the RunPod documentation that **Ask Poddy** will use to answer
+> questions.
+<!-- prettier-ignore-end -->
 
 3. Copy the `img` folder from `./data/runpod-docs/static/img` to `./public`
 
