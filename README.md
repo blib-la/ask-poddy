@@ -79,9 +79,9 @@ documents when interacting with the LLM.
 
 ---
 
-## Tutorial: Setting Up "Ask Poddy" in Your Environment
-
 <br />
+
+## Tutorial: Setting Up "Ask Poddy" in Your Environment
 
 ### 1. Clone the Repository
 
