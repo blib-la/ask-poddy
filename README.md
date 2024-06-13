@@ -9,9 +9,9 @@ ease of setting up OpenAI-compatible APIs using open-source models running serve
 [React](https://reactjs.org/), [Tailwind](https://tailwindcss.com/),
 [Vercel AI SDK](https://sdk.vercel.ai/docs/introduction), and
 [LangChain](https://js.langchain.com/), it uses
-[Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) for the LLM
-and [multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct)
-for text embeddings.
+[Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) as LLM and
+[multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct) for
+text embeddings.
 
 This tutorial will guide you through deploying **Ask Poddy** in your environment, enabling it to
 answer questions related to [RunPod](https://runpod.io) effectively, by leveraging the open-source
