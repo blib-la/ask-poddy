@@ -3,7 +3,7 @@ import { streamText } from "ai";
 import axios from "axios";
 import type { Document } from "langchain/document";
 
-const baseURL = `https://api.runpod.ai/v2/${process.env.RUNPOD_ENDPOINT_ID}/openai/v1`;
+const baseURL = `https://api.runpod.ai/v2/${process.env.RUNPOD_ENDPOINT_ID_VLLM}/openai/v1`;
 
 const provider = createOpenAI({
 	baseURL,

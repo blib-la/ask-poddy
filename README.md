@@ -19,19 +19,19 @@ RunPod.
 
 <!-- toc -->
 
-- [Concept](#concept)
-- [Prerequisites](#prerequisites)
-- [Tutorial: Setting Up "Ask Poddy" in Your Environment](#tutorial-setting-up-ask-poddy-in-your-environment)
-  * [1. Clone the Repository](#1-clone-the-repository)
-  * [2. Install Dependencies](#2-install-dependencies)
-  * [3. Set Up RunPod Serverless Endpoints](#3-set-up-runpod-serverless-endpoints)
-    + [3.1 Network Volumes](#31-network-volumes)
-    + [3.2 Worker-vLLM Endpoint](#32-worker-vllm-endpoint)
-    + [3.3 Worker-Infinity-Embedding Endpoint](#33-worker-infinity-embedding-endpoint)
-  * [4. Configure Environment Variables](#4-configure-environment-variables)
-  * [5. Populate the Vector Store](#5-populate-the-vector-store)
-  * [6. Start the Local Web Server](#6-start-the-local-web-server)
-  * [7. Use the RAG app](#7-use-the-rag-app)
+-   [Concept](#concept)
+-   [Prerequisites](#prerequisites)
+-   [Tutorial: Setting Up "Ask Poddy" in Your Environment](#tutorial-setting-up-ask-poddy-in-your-environment)
+    -   [1. Clone the Repository](#1-clone-the-repository)
+    -   [2. Install Dependencies](#2-install-dependencies)
+    -   [3. Set Up RunPod Serverless Endpoints](#3-set-up-runpod-serverless-endpoints)
+        -   [3.1 Network Volumes](#31-network-volumes)
+        -   [3.2 Worker-vLLM Endpoint](#32-worker-vllm-endpoint)
+        -   [3.3 Worker-Infinity-Embedding Endpoint](#33-worker-infinity-embedding-endpoint)
+    -   [4. Configure Environment Variables](#4-configure-environment-variables)
+    -   [5. Populate the Vector Store](#5-populate-the-vector-store)
+    -   [6. Start the Local Web Server](#6-start-the-local-web-server)
+    -   [7. Use the RAG app](#7-use-the-rag-app)
 
 <!-- tocstop -->
 
@@ -170,7 +170,7 @@ faster subsequent requests as the data does not need to be downloaded or recreat
 
 ```bash
 RUNPOD_API_KEY=your_runpod_api_key
-RUNPOD_ENDPOINT_ID=your_vllm_endpoint_id
+RUNPOD_ENDPOINT_ID_VLLM=your_vllm_endpoint_id
 RUNPOD_ENDPOINT_ID_EMBEDDING=your_embedding_endpoint_id
 ```
 
