@@ -5,11 +5,13 @@
 **Ask Poddy** _(named after ["Poddy"](./public/poddy.png), the [RunPod](https://runpod.io) mascot)_
 is a user-friendly Retrieval-Augmented Generation (RAG) web application designed to showcase the
 ease of setting up OpenAI-compatible APIs using open-source models running serverless on
-[RunPod](https://runpod.io). Built with Next.js, React, Tailwind, Vercel AI SDK, and LangChain, it
-uses [Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) for the
-LLM and
-[multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct) for
-text embeddings.
+[RunPod](https://runpod.io). Built with [Next.js](https://nextjs.org/),
+[React](https://reactjs.org/), [Tailwind](https://tailwindcss.com/),
+[Vercel AI SDK](https://sdk.vercel.ai/docs/introduction), and
+[LangChain](https://js.langchain.com/), it uses
+[Meta-Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) for the LLM
+and [multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct)
+for text embeddings.
 
 This tutorial will guide you through deploying **Ask Poddy** in your environment, enabling it to
 answer questions related to [RunPod](https://runpod.io) effectively, by leveraging the open-source
