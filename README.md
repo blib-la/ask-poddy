@@ -71,7 +71,7 @@ Here's how RAG works in **Ask Poddy**:
 
 <!-- prettier-ignore-start -->
 > [!TIP] 
-> You can choose any other LLM that is compatible with [vLLM](https://github.com/vllm-project/vllm). 
+> You can choose any LLM that is compatible with [vLLM](https://github.com/vllm-project/vllm). 
 <!-- prettier-ignore-end -->
 
 <br />
