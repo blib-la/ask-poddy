@@ -4,6 +4,8 @@ import type { Document } from "langchain/document";
 import { UnknownHandling } from "langchain/document_loaders/fs/directory";
 import { TextLoader } from "langchain/document_loaders/fs/text";
 
+import { minifyMarkdown } from "./minify";
+
 import { config } from "@/config/config";
 import { DirectoryLoaderPro } from "@/utils/directory-loader-pro";
 
@@ -12,11 +14,13 @@ export async function loadDocuments({
 	realPath,
 	directory,
 	split,
+	minify = true,
 }: {
 	type: string;
 	realPath: string;
 	directory: string;
 	split: string;
+	minify: boolean;
 }): Promise<Document<Record<string, any>>[]> {
 	let loader = null;
 
@@ -40,15 +44,27 @@ export async function loadDocuments({
 
 	const documents = await loader.load();
 
-	documents.map(async (document_: { pageContent: string; metadata: { source: any } }) => {
+	await documents.map(async (document_: { pageContent: string; metadata: { source: any } }) => {
 		const {
 			metadata: { source },
+			pageContent,
 		} = document_;
 
 		// Fix the "source" to point to relative path instead of full local path
 		const localPath = source.split(split)[1].replaceAll("\\", "/");
 		const newSource = `${localPath}`;
 		document_.metadata.source = newSource;
+
+		// Minify
+		if (minify) {
+			document_.pageContent = await minifyMarkdown(pageContent);
+		}
+
+		// If (newSource.match("manage-endpoints")) {
+		// 	console.log(document_);
+		// 	console.log("-------------------------------------");
+		// 	console.log("-------------------------------------");
+		// }
 
 		return document_;
 	});

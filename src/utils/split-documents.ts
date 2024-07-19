@@ -19,6 +19,13 @@ export async function splitDocuments(type: string, documents: Document<Record<st
 			}
 
 			case "markdown": {
+				console.log(
+					"chunkSize",
+					config.get(`dataType.${type}.chunkSize`),
+					"chunkOverlap",
+					config.get(`dataType.${type}.chunkOverlap`)
+				);
+
 				splitter = RecursiveCharacterTextSplitter.fromLanguage("markdown", {
 					chunkSize: config.get(`dataType.${type}.chunkSize`),
 					chunkOverlap: config.get(`dataType.${type}.chunkOverlap`),
@@ -38,6 +45,14 @@ export async function splitDocuments(type: string, documents: Document<Record<st
 	}
 
 	const chunks = await splitter.splitDocuments(documents);
+
+	chunks.map(chunk => {
+		if (chunk.metadata.source === "/runpod-docs/docs/sdks/graphql/manage-endpoints.md") {
+			console.log(chunk);
+		}
+
+		return chunk;
+	});
 
 	return chunks;
 }

@@ -8,7 +8,7 @@ const PATH_USER_CONFIG = path.join(process.cwd(), "config.json");
 
 export const PATH_VECTOR_STORE = path.join(process.cwd(), "store");
 
-interface GptConfig {
+interface LLMConfig {
 	temperature: number;
 	maxNewTokens: number;
 }
@@ -27,7 +27,7 @@ interface FileType {
 }
 
 interface MyConfig {
-	gpt: GptConfig;
+	llm: LLMConfig;
 	vectorDatabase: VectorDatabaseConfig;
 
 	dataType: {
@@ -36,7 +36,7 @@ interface MyConfig {
 }
 
 const schema: Schema<MyConfig> = {
-	gpt: {
+	llm: {
 		temperature: {
 			default: 0.2,
 			format: "Number",
@@ -81,7 +81,7 @@ const schema: Schema<MyConfig> = {
 			chunkSize: {
 				doc: "Chunk size for the markdown type",
 				format: "nat",
-				default: 1000,
+				default: 500,
 			},
 			chunkOverlap: {
 				doc: "Chunk overlap for the markdown type",

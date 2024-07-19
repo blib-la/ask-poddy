@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "populate": "npx tsx scripts/populate.ts"
+    "populate": "npx tsx scripts/populate.ts",
+    "search": "npx tsx scripts/search.ts",
+    "text-to-embedding": "npx tsx scripts/text-to-embedding.ts",
+    "developer": "npx tsx scripts/developer.ts",
+    "chunks": "npx tsx scripts/chunks.ts"
   },
   "dependencies": {
     "@ai-sdk/openai": "^0.0.20",
@@ -29,9 +33,18 @@
     "react": "^18",
     "react-dom": "^18",
     "react-markdown": "^9.0.1",
+    "rehype": "^13.0.1",
+    "rehype-parse": "^9.0.0",
+    "rehype-remark": "^10.0.0",
+    "rehype-stringify": "^10.0.0",
+    "remark": "^15.0.1",
     "remark-gfm": "^4.0.0",
+    "remark-html": "^16.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "unified": "^11.0.4"
   },
   "devDependencies": {
     "@types/convict": "^6.1.6",

@@ -40,6 +40,7 @@ export const PATH_SPLIT = path.join("ask-poddy", "data");
 						directory: directory.name,
 						realPath: PATH_DATA,
 						split: PATH_SPLIT,
+						minify: true,
 					});
 
 					console.log(`${directory.name}: ${documents.length} ${type} file(s)`);
