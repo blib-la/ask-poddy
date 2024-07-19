@@ -12,16 +12,16 @@ const provider = createOpenAI({
 
 const model = provider.chat("meta-llama/Meta-Llama-3-8B-Instruct");
 
-function createSystemPrompt(context: string) {
+function createSystemPrompt(data: string) {
 	return `You are a helpful assistant with all questions related to RunPod. 
 You provide precise answers and how to guides, always with the focus on RunPod. 
 Your answers are always complete.
 You don't come up with answers if you have no idea on how to answer a question. 
-You format your message so that they are easier to consume and make sure to include links from the CONTEXT.
-You use the CONTEXT to answer the query from the user, but never mention that you are using the CONTEXT.
+You format your message so that they are easier to consume and make sure to include links from the DATA.
+You use the DATA to answer the query from the user, but never mention that you are using the DATA.
 
-## CONTEXT
-${context}
+## DATA
+${data}
 `;
 }
 
@@ -42,14 +42,14 @@ export async function POST(request: Request) {
 	}
 
 	// Combine the documents
-	const context = documents.map((document: Document) => document.pageContent).join("\n");
+	const data = documents.map((document: Document) => document.pageContent).join("\n");
 
-	console.log(context);
+	console.log(data);
 
-	// Call the LLM including the message history + context
+	// Call the LLM including the message history + data
 	const result = await streamText({
 		model,
-		system: createSystemPrompt(context),
+		system: createSystemPrompt(data),
 		messages,
 		maxTokens: 6000,
 		temperature: 0.1,
